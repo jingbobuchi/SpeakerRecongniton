@@ -47,9 +47,11 @@ class MVectorTrainer(object):
         :param use_gpu: 是否使用GPU训练模型
         """
         if use_gpu:
+            # 如果GPU不可用，产生断言错误
             assert (torch.cuda.is_available()), 'GPU不可用'
             self.device = torch.device("cuda")
         else:
+            # 禁用所有的GPU设备
             os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
             self.device = torch.device("cpu")
         self.use_gpu = use_gpu

@@ -35,5 +35,5 @@ def create_cn_celeb2(list_path, data_path='dataset/'):
 
 
 if __name__ == '__main__':
-    create_cn_celeb(list_path='dataset/train_list.txt', data_path='dataset')
+    # create_cn_celeb(list_path='dataset/train_list.txt', data_path='dataset')
     create_cn_celeb2(list_path='dataset/train_list.txt', data_path='dataset')
